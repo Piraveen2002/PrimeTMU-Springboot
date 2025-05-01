@@ -1,0 +1,63 @@
+POST http://localhost:8080/api/clients
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Jack",
+    "username": "abc",
+    "password": "password"
+}
+
+###
+GET http://localhost:8080/api/clients
+
+###
+DELETE http://localhost:8080/api/clients/2bb03f29-63c3-4795-8b25-16875e8a3c20
+
+###
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "userId": "a5490300-a529-450f-80e4-ca5e659587bd",
+  "imageId": null,
+  "category": "Product",
+  "itemType": "Laptop",
+  "title": "MacBook Pro 2023",
+  "description": "Brand new MacBook Pro, unopened box.",
+  "location": "Toronto, ON",
+  "price": 2499.99
+}
+
+###
+DELETE http://localhost:8080/api/posts/124ed4ff-227a-4c38-819c-d2d591744475
+
+###
+GET http://localhost:8080/api/posts
+
+###
+PUT http://localhost:8080/api/posts/9cdba8cb-3157-46ce-915d-ae694ec65f7a
+Content-Type: application/json
+
+{
+    "category": "product",
+    "itemType": "Laptop",
+    "title": "MacBook Pro 2024 (New Gen)",
+    "description": "Brand new MacBook Pro, unopened box.",
+    "location": "Toronto, ON",
+    "price": 2000.00
+}
+
+###
+POST http://localhost:8080/api/posts/53b3d795-bf8c-4e4b-929e-74c7c360dabd/image
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="C:/Users/Perry/Desktop/download.jpg"
+Content-Type: image/jpeg
+
+< C:/Users/Perry/Desktop/download.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+GET http://localhost:8080/api/posts/53b3d795-bf8c-4e4b-929e-74c7c360dabd/image
