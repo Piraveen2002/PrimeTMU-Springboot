@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "firstName": "John",
     "lastName": "Jack",
-    "username": "abc",
+    "username": "JACK",
     "password": "password"
 }
 
@@ -19,7 +19,7 @@ POST http://localhost:8080/api/posts
 Content-Type: application/json
 
 {
-  "userId": "a5490300-a529-450f-80e4-ca5e659587bd",
+  "username": "john",
   "imageId": null,
   "category": "Product",
   "itemType": "Laptop",
@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8080/api/posts/53b3d795-bf8c-4e4b-929e-74c7c360dabd/image
+POST http://localhost:8080/api/posts/9e35b172-2bbe-4fea-bf35-ca559aa61884/image
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -61,3 +61,12 @@ Content-Type: image/jpeg
 
 ###
 GET http://localhost:8080/api/posts/53b3d795-bf8c-4e4b-929e-74c7c360dabd/image
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "JACK",
+  "password": "password"
+}
